@@ -127,7 +127,7 @@ runUMAP <- function(x, ..., altexp=NULL, name="UMAP") {
         y <- x
     }
     ### begin changes ###
-    if (ret_model) {
+    if (hasArg(ret_model)) {
         message("Returning the UMAP model and not the embedding.")
         return(calculateUMAP(y, ...))
     }
